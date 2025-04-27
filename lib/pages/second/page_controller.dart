@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:cryptox/chatbot/chatbot.dart';
+import 'package:cryptox/pages/main/signals_page.dart' show SignalsPage;
 import 'package:cryptox/pages/second/home_page.dart';
 import 'package:cryptox/pages/second/trade_page.dart';
 import 'package:cryptox/pages/second/wallet_page.dart';
@@ -35,8 +36,9 @@ class _MainPageState extends State<MainPage> {
         },
         children: const [
           HomePage(),
-          WalletPage(),
+          SignalsPage(),
           TradePage(),
+          WalletPage(),
         ],
       ),
       floatingActionButton: const ChatbotWidget(),
@@ -83,11 +85,15 @@ class _MainPageState extends State<MainPage> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.account_balance_wallet),
-                label: 'Wallet',
+                label: 'Signals',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.show_chart),
-                label: 'Trade',
+                label: 'News',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.show_chart),
+                label: 'Profile',
               ),
             ],
           ),
